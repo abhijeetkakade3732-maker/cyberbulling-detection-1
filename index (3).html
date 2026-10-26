@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyberbullying Detection</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:32px 16px;font-family:Arial,Helvetica,sans-serif;color:#172033;background:linear-gradient(135deg,#eef2ff,#f8fafc 55%,#e0f2fe)}
+main{max-width:760px;margin:0 auto}.tag{display:inline-block;padding:7px 12px;border-radius:20px;background:#e0e7ff;color:#3730a3;font-size:13px;font-weight:bold}
+h1{font-size:clamp(30px,6vw,46px);margin:18px 0 10px;letter-spacing:-1px}.intro{color:#596579;line-height:1.6;margin-bottom:24px}
+.card{background:white;padding:clamp(20px,5vw,32px);border-radius:20px;box-shadow:0 15px 45px rgba(30,41,59,.10);border:1px solid #e2e8f0}
+label{display:block;font-weight:bold;margin-bottom:10px}textarea{display:block;width:100%;min-height:150px;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font:inherit;resize:vertical}
+textarea:focus{outline:3px solid #c7d2fe;border-color:#4f46e5}button{width:100%;margin-top:14px;padding:14px;border:0;border-radius:12px;background:#4f46e5;color:white;font-size:16px;font-weight:bold;cursor:pointer}
+button:hover{background:#3730a3}.result,.error{margin-top:20px;padding:16px;border-radius:12px}.result{background:#ecfdf5;border:1px solid #a7f3d0}.result strong{display:block;font-size:22px;margin-top:5px;text-transform:capitalize}
+.error{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}.muted{color:#64748b;font-size:13px;line-height:1.6}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{padding:6px 10px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;font-size:13px}footer{text-align:center;color:#64748b;font-size:12px;line-height:1.6;margin:22px 0}
+</style></head>
+<body><main>
+<span class="tag">College project · Machine learning</span><h1>Cyberbullying Detection</h1>
+<p class="intro">Enter a message below to predict its category using the model trained on your project dataset.</p>
+<section class="card">
+<form method="post" action="/"><label for="message">Message to check</label>
+<textarea id="message" name="message" maxlength="2000" placeholder="Type or paste a message here..." required>{{ message }}</textarea>
+<button type="submit">Detect category</button></form>
+{% if error %}<div class="error" role="alert">{{ error }}</div>{% endif %}
+{% if prediction %}<div class="result" aria-live="polite">Predicted category<strong>{{ prediction }}</strong>
+<p class="muted">This is an automated prediction, not a final judgement. Review the message and its context before taking action.</p></div>{% endif %}
+<div class="muted" style="margin-top:22px"><strong>Categories in your dataset</strong><div class="chips">
+{% for category in categories %}<span class="chip">{{ category }}</span>{% endfor %}</div><p>Training examples loaded: {{ dataset_size }}</p></div>
+</section><footer>Educational demo only. A small dataset can produce inaccurate predictions, especially for messages unlike the training examples.</footer>
+</main></body></html>
