@@ -1,0 +1,41 @@
+ID,Text,Label
+1,Have a great day !,Normal
+2,I really like your project.,Normal
+3,Can you help me with this assignment ?,Normal
+4,Good luck for your exam.,Normal
+5,Thanks for your help.,Normal
+6,your presentation was interesting.,Normal
+7,Let's meet after class.,Normal
+8,I disagree with your opinion.,Normal
+9,That was a funny joke.,Normal
+10,See you tomorrow.,Normal
+11,You are so stuoid.,insult
+12,You're an idiot.,insult
+13,Nobody wants to hear you talk.,insult
+14,You are terrible at this.,insult
+15,What a useless answer.,insult
+16,You're acting like a fool.,insult
+17,Your ideas are ridiculous.,insult
+18,You don't know anything.,insult
+19,You're such loser.,insult
+20,That was a dumb decision.,insult
+21,Stop messaging me repeatedly.,harassment
+22,Why do you keep bothering me?,harassment
+23,Everyone should ignore this person.,harassment
+24,You keep making fun of me every day.,harassment
+25,Stop targeting me online.,harassment
+26,You're constantly sending me abusive messages.,harassment
+27,Leave me alone and stop contacting me.,harassment
+28,You keep embarrassing me in the group.,harassment
+29,Stop posting mean comments about me.,harassment
+30,You have been bullying me for weeks.,harassment
+31,I will hurt you.,threat
+32,You better watch yourself.,threat
+33,I am going to hurt you.,threat
+34,you'll regret what you did.,threat
+35,Don’t make me come after you.,threat
+36,I will make you pay for this.,threat
+37,Stay away from me or else.,threat
+38,You won't be safe if you continue.,threat
+39,I am coming to find you.,threat
+40,Stop now or there will be consequences.,threat
